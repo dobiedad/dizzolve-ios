@@ -23,6 +23,8 @@
 		B304ACC419C1C79E0007CEBA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B304ACC219C1C79E0007CEBA /* InfoPlist.strings */; };
 		B304ACC619C1C79E0007CEBA /* DizzolveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B304ACC519C1C79E0007CEBA /* DizzolveTests.m */; };
 		B304ACD119C1C8E50007CEBA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B304ACD019C1C8E50007CEBA /* Reachability.m */; };
+		B304ACD519C1D25E0007CEBA /* zolveicon.png in Resources */ = {isa = PBXBuildFile; fileRef = B304ACD419C1D25E0007CEBA /* zolveicon.png */; };
+		B304ACD719C1D8680007CEBA /* dizzolveloading.png in Resources */ = {isa = PBXBuildFile; fileRef = B304ACD619C1D8680007CEBA /* dizzolveloading.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		B304ACC519C1C79E0007CEBA /* DizzolveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DizzolveTests.m; sourceTree = "<group>"; };
 		B304ACCF19C1C8E50007CEBA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		B304ACD019C1C8E50007CEBA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		B304ACD419C1D25E0007CEBA /* zolveicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zolveicon.png; sourceTree = "<group>"; };
+		B304ACD619C1D8680007CEBA /* dizzolveloading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dizzolveloading.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +126,9 @@
 				B304ACA919C1C79E0007CEBA /* Main_iPhone.storyboard */,
 				B304ACAC19C1C79E0007CEBA /* Main_iPad.storyboard */,
 				B304ACCF19C1C8E50007CEBA /* Reachability.h */,
+				B304ACD619C1D8680007CEBA /* dizzolveloading.png */,
 				B304ACD019C1C8E50007CEBA /* Reachability.m */,
+				B304ACD419C1D25E0007CEBA /* zolveicon.png */,
 				B304ACAF19C1C79E0007CEBA /* ViewController.h */,
 				B304ACB019C1C79E0007CEBA /* ViewController.m */,
 				B304ACB219C1C79E0007CEBA /* Images.xcassets */,
@@ -207,6 +213,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Dizzolve;
 				TargetAttributes = {
+					B304AC9319C1C79E0007CEBA = {
+						DevelopmentTeam = K9C6768A34;
+					};
 					B304ACB719C1C79E0007CEBA = {
 						TestTargetID = B304AC9319C1C79E0007CEBA;
 					};
@@ -239,7 +248,9 @@
 				B304ACAE19C1C79E0007CEBA /* Main_iPad.storyboard in Resources */,
 				B304ACB319C1C79E0007CEBA /* Images.xcassets in Resources */,
 				B304ACAB19C1C79E0007CEBA /* Main_iPhone.storyboard in Resources */,
+				B304ACD519C1D25E0007CEBA /* zolveicon.png in Resources */,
 				B304ACA219C1C79E0007CEBA /* InfoPlist.strings in Resources */,
+				B304ACD719C1D8680007CEBA /* dizzolveloading.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,8 +405,7 @@
 		B304ACCA19C1C79E0007CEBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dizzolve/Dizzolve-Prefix.pch";
 				INFOPLIST_FILE = "Dizzolve/Dizzolve-Info.plist";
@@ -407,8 +417,7 @@
 		B304ACCB19C1C79E0007CEBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dizzolve/Dizzolve-Prefix.pch";
 				INFOPLIST_FILE = "Dizzolve/Dizzolve-Info.plist";

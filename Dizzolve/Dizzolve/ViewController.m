@@ -15,7 +15,7 @@
 @end
 
 @implementation ViewController
-@synthesize  spinner;
+@synthesize loadingImage, spinner;
 
 - (void)viewDidLoad {
     
@@ -38,15 +38,15 @@
     reach.unreachableBlock = ^(Reachability*reach)
     {
         NSLog(@"UNREACHABLE!");
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Dizzolve" message:@"Dizzolve requires a good internet connection, please connect to the internet." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Stolle" message:@"This app requires an internet connection, please connect to the internet." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     };
     
     // Start the notifier, which will cause the reachability object to retain itself!
     [reach startNotifier];
     
-    NSString *dizzolveURL = @"http://www.dizzolve.co.uk";
-    NSURL *url = [NSURL URLWithString:dizzolveURL];
+    NSString *zolveURL = @"http://www.dizzolve.co.uk";
+    NSURL *url = [NSURL URLWithString:zolveURL];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [_DizzolveWebView loadRequest:requestObj];
     _DizzolveWebView.scrollView.bounces = NO;
@@ -55,11 +55,15 @@
 - (void)webViewDidStartLoad:(UIWebView *)webView {
 //    [labelLoading setHidden:NO];
     spinner.hidden = NO;
+    loadingImage.hidden = NO;
+
+
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-//    [labelLoading setHidden:YES];
     spinner.hidden = YES;
+    loadingImage.hidden = YES;
+
 }
 
 - (void)didReceiveMemoryWarning

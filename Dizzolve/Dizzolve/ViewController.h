@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface  ViewController  : UIViewController <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *DizzolveWebView;
-@property (weak, nonatomic) IBOutlet UIWebView *spinner;
 
+@property (weak, nonatomic) IBOutlet UIImageView *loadingImage;
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @end

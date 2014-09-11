@@ -17,12 +17,16 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KdC-c0-rwZ">
-                                <rect key="frame" x="0.0" y="-108" width="320" height="676"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8b4-RC-Wb8">
-                                <rect key="frame" x="142" y="299" width="37" height="37"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dizzolveloading.png" translatesAutoresizingMaskIntoConstraints="NO" id="52I-B8-d8y">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="cWM-47-uzI">
+                                <rect key="frame" x="150" y="354" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="1" green="0.0073365899630000002" blue="0.083803695129999994" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
@@ -31,13 +35,17 @@
                     </view>
                     <connections>
                         <outlet property="DizzolveWebView" destination="KdC-c0-rwZ" id="EYq-Az-rGU"/>
-                        <outlet property="spinner" destination="KdC-c0-rwZ" id="Yrf-cY-ctX"/>
+                        <outlet property="loadingImage" destination="52I-B8-d8y" id="1cF-WK-2Yl"/>
+                        <outlet property="spinner" destination="cWM-47-uzI" id="k43-KA-Pqq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="dizzolveloading.png" width="640" height="1136"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
